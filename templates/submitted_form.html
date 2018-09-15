@@ -1,0 +1,108 @@
+<html>
+ <head>
+   <style>
+   th, td {
+     border-bottom: 1px solid #ddd;
+   }
+   </style>
+   <title>Submitted form</title>
+   <link rel="stylesheet" type="text/css" href="../static/style_submitted.css">
+   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+ </head>
+ <body>
+   <div id="container">
+     <div class="pagetitle">
+       <h1><i class="em-svg em-sparkles"></i><i>F A I R W E L L</i> <i class="em-svg em-sparkles"></i></h1>
+     </div>
+     <div id="main">
+       <p class="review" class="aligncenter">Flights For <i>You</i></p>
+       <p class="info" class="aligncenter">
+          <strong>University</strong>: {{university}} <br>
+          <strong>Departure</strong>: {{departure}} <br>
+          <strong>Destination</strong>: {{destination}} <br>
+          <strong>{{month}}/{{day}}/{{year}}</strong> <br>
+       </p>
+          <p class="headers" class="aligncenter" style="font-size:30px"><strong>Deals Available</strong> <i class="em em-airplane"></i></p>
+      <table>
+        <tr>
+          <th>Flight Number</th>
+          <th>Departure</th>
+          <th>Destination</th>
+          <th>Flight Date/Time</th>
+          <th>Flight Type</th>
+          <th>Fare Type</th>
+          <th>Dollar Fare <i class="em em-moneybag"></i><i class="em em-star2"></i></th>
+        </tr>
+        <tbody>
+       {% for deal in dealsAv %}
+       <tr>
+        {% for item in deal %}
+          <td> {{ item }} </td>
+        {% endfor %}
+      </tr>
+       {% endfor %}
+       </tbody>
+     </table>
+
+     <br>
+  <p class="headers" class="aligncenter" style="font-size:30px"><strong>Lowest Fares Available</strong> <i class="em em-airplane_arriving"></i></p>
+    <table>
+        <tr>
+          <th>Departure</th>
+          <th>Destination</th>
+          <th>Flight Date/Time</th>
+          <th>Flight Type</th>
+          <th>Fare Type</th>
+          <th>Final Price <i class="em em-moneybag"></i><i class="em em-star2"></i></th>
+        </tr>
+        <tbody>
+       {% for fare in lowestFaresAv %}
+       <tr>
+        {% for item in fare %}
+          <td> {{ item }} </td>
+        {% endfor %}
+      </tr>
+       {% endfor %}
+       </tbody>
+     </table>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+   </div>
+   <div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
+ </body>
+</html>
