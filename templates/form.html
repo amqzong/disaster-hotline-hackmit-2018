@@ -1,5 +1,23 @@
 <html>
   <head>
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDEOnAifKMnPkaeZXEn61NrZsZVfp3C7nw",
+        authDomain: "hackmit2018mas.firebaseapp.com",
+        databaseURL: "https://hackmit2018mas.firebaseio.com",
+        projectId: "hackmit2018mas",
+        storageBucket: "hackmit2018mas.appspot.com",
+        messagingSenderId: "421391111063"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    
     <title>Submit a form</title>
    <link rel="stylesheet" type="text/css" href="../static/style.css">
    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
@@ -7,52 +25,9 @@
   <body>
     <div id="container">
       <div class="pagetitle">
-        <h1><i class="em-svg em-sparkles"></i><i>F A I R W E L L</i> <i class="em-svg em-sparkles"></i></h1>
+        <h1><i class="em-svg em-sparkles"></i><i>Disaster Hotline</i> <i class="em-svg em-sparkles"></i></h1>
       </div>
       <div id="main">
-
-        <form method="post" action="{{ url_for('submitted_form') }}">
-          <table>
-            <tr>
-              <th><label class="black" for="university">University</label></th>
-            </tr>
-            <tr>
-              <th><input class="answer" type="text" name="university"><br /></th>
-            </tr>
-            <tr>
-              <th><label class="black" for="departure">Departure</label></th>
-            </tr>
-            <tr>
-              <th><input class="answer" type="text" name="departure"><br /></th>
-            </tr>
-            <tr>
-              <th><label class="black" for="destination">Destination</label></th>
-            </tr>
-            <tr>
-              <th><input class="answer" type="text" name="destination"><br /></th>
-            </tr>
-            </table>
-
-            <table>
-              <tr>
-              <th class="aligncenter"><label class="white" for="year">Year</label></th>
-              <th class="aligncenter"><label class="white" for="month">Month</label></th>
-              <th class="aligncenter"><label class="white" for="day">Day</label></th>
-            </tr>
-
-            <tr>
-              <td class="aligncenter"><input class= "answer2" type="text" name="year"><br /></td>
-              <td class="aligncenter"><input class= "answer2" type="text" name="month"><br /></td>
-              <td class="aligncenter"><input class= "answer2" type="text" name="day"></td>
-            </tr>
-          </table>
-            <div class="buttonHolder">
-              <input class="submit" type="submit">
-            </div>
-        </form>
-      </div>
-    </div>
-    <div class="snowflakes" aria-hidden="true">
   <div class="snowflake">
   ❄
   </div>
@@ -85,4 +60,8 @@
   </div>
 </div>
   </body>
+
+  
+
 </html>
+
