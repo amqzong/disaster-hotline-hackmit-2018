@@ -7,10 +7,10 @@ navigator.mediaDevices.getUserMedia({audio:true})
             rec.ondataavailable = e => {
               audioChunks.push(e.data);
               if (rec.state == "inactive"){
-                let blob = new Blob(audioChunks,{type:'audio/mpeg-3'});
+                let blob = new Blob(audioChunks,{type:'audio/mp3'});
                 recordedAudio.src = URL.createObjectURL(blob);
                 recordedAudio.controls=true;
-                recordedAudio.autoplay=true;
+                
                 sendData(blob)
               }
             }
@@ -33,23 +33,23 @@ navigator.mediaDevices.getUserMedia({audio:true})
           rec.stop();
         }
 
-        var ffmpeg = require('ffmpeg');
-        try{
-          car process = new ffmpeg('path/to/blob/file')
-          process.then(function(audio){
-            audio.fxExtractSountToMP3('path/to/new/file.mp3', function (error, file){
-              if (!error)
-                console.log('Audio file: ' + file);
-            });
-          }, function (err){
-            console.log('Error: ' + err);
+        // var ffmpeg = require('ffmpeg');
+        // try{
+        //   car process = new ffmpeg(recordedAudio)
+        //   process.then(function(audio){
+        //     audio.fxExtractSountToMP3('recording.mp3', function (error, file){
+        //       if (!error)
+        //         console.log('Audio file: ' + file);
+        //     });
+        //   }, function (err){
+        //     console.log('Error: ' + err);
           
-          });
-        }
-        catch(e){
-          console.log(e.code);
-          console.log(e.msg);
-        }
+        //   });
+        // }
+        // catch(e){
+        //   console.log(e.code);
+        //   console.log(e.msg);
+        // }
 
 
 

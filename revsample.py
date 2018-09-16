@@ -92,18 +92,38 @@ def test_workflow_with_file(file):
 
     return get_transcript(id)
 
-def main():
+def main_rev():
     # Testing with URL
-    media_url = "https://www.youtube.com/watch?v=U5nl29l-zv0"
-    test_workflow_with_url(media_url)
+    # var config = {
+    #     apiKey: "AIzaSyDEOnAifKMnPkaeZXEn61NrZsZVfp3C7nw",
+    #     authDomain: "hackmit2018mas.firebaseapp.com",
+    #     databaseURL: "https://hackmit2018mas.firebaseio.com",
+    #     projectId: "hackmit2018mas",
+    #     storageBucket: "hackmit2018mas.appspot.com",
+    #     messagingSenderId: "421391111063"
+    #   };
 
+    #   firebase.initializeApp(config);
+    #   var fbBucketName = 'hackmit2018mas';
+    #   var storageRef = firebase.storage().ref();
+    #   var media_url;
+    #   storageRef.child(fbBucketName + '/hurricanecoming.mp3').getDownloadURL().then(function(url) {
+    #     media_url = url;
+# }).catch(function(error) {
+#   # Handle any errors
+# });
+
+    # test_workflow_with_url(media_url)
+    print('hello, debugging')
+    return True
     # Testing with file upload
     # file = "hurricanecoming.mp3"
     # transcript = test_workflow_with_file(file)
-
-    textFile = open('transcript.txt','w')
-    textFile.write(transcript)
-    textFile.close()
+    # var fbBucketName2 = 'hackmit2018mas2';
+    # textFile = open('transcript.txt','w')
+    # textFile.write(transcript)
+    # textFile.close()
+    # storageRef.child(fbBucketName2 + '/transcript').put(textFile);
 
 if __name__ == "__main__":
     main()

@@ -16,12 +16,18 @@
 #
 from flask import Flask, render_template, request
 from operator import itemgetter, attrgetter
+from revsample import main_rev
 app = Flask(__name__)
 app.config['DEBUG']=True
+app.config['TEMPLATES_AUTO_RELOAD']=True
 
 @app.route('/')
 def form():
     return render_template('form.html')
+
+@app.route('/process')
+def transcribe():
+	main_rev()
 
 if __name__ == '__main__':
     app.run()
