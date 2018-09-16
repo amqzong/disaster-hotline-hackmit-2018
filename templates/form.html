@@ -1,6 +1,8 @@
 
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="buttonstuff.css">
+    <script type="text/javascript" src="buttonthings.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
     <!-- Add additional services that you want to use -->
@@ -57,11 +59,16 @@
     </script>
 
 
-
+  <h2>Record</h2>
+      <p>
+          <button id=record></button>
+          <button id=stopRecord disabled>Stop</button>
+      </p>
+      <p>
+          <audio id=recordedAudio></audio>
+  
+      </p>
     
-    <title>Submit a form</title>
-   <link rel="stylesheet" type="text/css" href="../static/style.css">
-   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   </head>
   <body>
     <div id="container">

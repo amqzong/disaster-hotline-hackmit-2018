@@ -94,12 +94,12 @@ def test_workflow_with_file(file):
 
 def main():
     # Testing with URL
-    #media_url = "https://www.youtube.com/watch?v=U5nl29l-zv0"
-    #test_workflow_with_url(media_url)
+    media_url = "https://www.youtube.com/watch?v=U5nl29l-zv0"
+    test_workflow_with_url(media_url)
 
     # Testing with file upload
-    file = "hurricanecoming.mp3"
-    transcript = test_workflow_with_file(file)
+    # file = "hurricanecoming.mp3"
+    # transcript = test_workflow_with_file(file)
 
     textFile = open('transcript.txt','w')
     textFile.write(transcript)
