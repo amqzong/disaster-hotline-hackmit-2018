@@ -36,11 +36,99 @@
   right: 100px;
   position: relative;
 }
-h2 {
-    left: 100px;
-    position: relative;
+
+h1 {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  font: 70px Abril,sans-serif;
 }
+h2 {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, 550%);
+  transform: translate(-50%, 550%);
+  font: 30px 'Droid Serif',sans-serif;
+}
+
+#container
+{
+  text-align: center;
+  position: relative;
+}
+
+#record
+{
+  background-size: 150px 150px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-100%, 600%);
+  transform: translate(-100%, 600%);
+  min-width:50px;
+  min-height:50px;
+  border-radius:50%;
+  font: 30px 'Droid Serif',sans-serif; 
+}
+
+#stopRecord
+{
+  background-size: 150px 150px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(20%, 600%);
+  transform: translate(20%, 600%);
+  min-width:50px;
+  min-height:50px;
+  border-radius:50%;
+  font: 30px 'Droid Serif',sans-serif;  
+}
+
 #recordedAudio {
   left: 100px;
   right: 100px;
   position: relative;
+}
+
+#fileButton {
+  background-size: 150px 150px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-100%, 600%);
+  transform: translate(-100%, 600%);
+  min-width:50px;
+  min-height:50px;
+  border-radius:50%;
+  font: 18px 'Droid Serif',sans-serif; 
+}
+
+#noFile {
+  background-size: 150px 150px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-30%, 600%);
+  transform: translate(-30%, 600%);
+  min-width:50px;
+  min-height:50px;
+  border-radius:50%;
+  font: 18px 'Droid Serif',sans-serif; 
+}
+
+#chooseFile {
+  background-size: 150px 150px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -ms-transform: translate(-30%, 550%);
+  transform: translate(-30%, 550%);
+  min-width:50px;
+  min-height:50px;
+  border-radius:50%;
+  font: 18px 'Droid Serif',sans-serif; 
+}

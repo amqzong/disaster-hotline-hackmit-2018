@@ -12,8 +12,8 @@
 
 <div class="file-upload">
   <div class="file-select">
-    <div class="file-select-button" id="fileButton">Choose File</div>
-    <div class="file-select-name" id="noFile">No file chosen...</div> 
+    <div class="file-select-button" id="fileButton"></div>
+    <div class="file-select-name" id="noFile"></div> 
     <input type="file" name="chooseFile" id="chooseFile">
   </div>
 </div>
@@ -40,7 +40,7 @@
       // import { storage } from '~/plugins/firebase.js'
 
       firebase.initializeApp(config);
-      var uploader = document.getElementById('uploader');
+      // var uploader = document.getElementById('uploader');
       var fileButton = document.getElementById('chooseFile');
       var fbBucketName = 'hackmit2018mas';
 
@@ -61,26 +61,24 @@
 
     </script>
 
-
-  <h2>Record</h2>
-      <p>
-          <button id=record></button>
-          <button id=stopRecord disabled>Stop</button>
-      </p>
-      <p>
-          <audio id=recordedAudio></audio>
-  
-      </p>
-    
   </head>
-  <body>
+
+  <div id="container">
+    <h1>Disaster Hotline</h1>
+
+    <h2>Record</h2>
+    <button id=record>Start</button>
+    <button id=stopRecord disabled>Stop</button>
+    <audio id=recordedAudio></audio>
+  </div>
+
+  <!-- <body>
     <a href="/process"><input type="button" value="Submit"></a>
     <div id="container">
       <div class="pagetitle">
         <h1><i class="em-svg em-sparkles"></i><i>Disaster Hotline</i> <i class="em-svg em-sparkles"></i></h1>
       </div>
-  </body>
-
+  </body> -->
   
 
 </html>

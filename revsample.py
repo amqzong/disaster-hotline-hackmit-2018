@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import js2py
 
 API_KEY = "Bearer 01XIo4EqB4Kzyj2UkXtgqWvatQbkCsux4xW386TloJtxL2kvwQ40T2vnWiZQtRBfcDIES9xLv35NU8tomLaysPqEy8f90"
 HEADERS = {'Authorization': API_KEY}
@@ -94,36 +95,39 @@ def test_workflow_with_file(file):
 
 def main_rev():
     # Testing with URL
-    # var config = {
-    #     apiKey: "AIzaSyDEOnAifKMnPkaeZXEn61NrZsZVfp3C7nw",
-    #     authDomain: "hackmit2018mas.firebaseapp.com",
-    #     databaseURL: "https://hackmit2018mas.firebaseio.com",
-    #     projectId: "hackmit2018mas",
-    #     storageBucket: "hackmit2018mas.appspot.com",
-    #     messagingSenderId: "421391111063"
-    #   };
 
-    #   firebase.initializeApp(config);
-    #   var fbBucketName = 'hackmit2018mas';
-    #   var storageRef = firebase.storage().ref();
-    #   var media_url;
-    #   storageRef.child(fbBucketName + '/hurricanecoming.mp3').getDownloadURL().then(function(url) {
-    #     media_url = url;
-# }).catch(function(error) {
-#   # Handle any errors
-# });
+    js = """
+    var config = {
+        apiKey: "AIzaSyDEOnAifKMnPkaeZXEn61NrZsZVfp3C7nw",
+        authDomain: "hackmit2018mas.firebaseapp.com",
+        databaseURL: "https://hackmit2018mas.firebaseio.com",
+        projectId: "hackmit2018mas",
+        storageBucket: "hackmit2018mas.appspot.com",
+        messagingSenderId: "421391111063"
+      };
+
+      firebase.initializeApp(config);
+      var fbBucketName = 'hackmit2018mas';
+      var storageRef = firebase.storage().ref();
+      var media_url;
+      storageRef.child(fbBucketName + '/hurricanecoming.mp3').getDownloadURL().then(function(url) {
+        media_url = url;
+    }).catch(function(error) {
+    });
+    """.replace("document.write", "return ")
+
+    result = js2py.eval_js(js)
 
     # test_workflow_with_url(media_url)
-    print('hello, debugging')
-    return True
+    # print('hello, debugging')
+    # return True
     # Testing with file upload
-    # file = "hurricanecoming.mp3"
-    # transcript = test_workflow_with_file(file)
-    # var fbBucketName2 = 'hackmit2018mas2';
-    # textFile = open('transcript.txt','w')
-    # textFile.write(transcript)
-    # textFile.close()
-    # storageRef.child(fbBucketName2 + '/transcript').put(textFile);
+    file = "hurricanecoming.mp3"
+    transcript = test_workflow_with_file(file)
+    textFile = open('transcript.txt','w')
+    textFile.write(transcript)
+    textFile.close()
+    storageRef.child(fbBucketName2 + '/transcript').put(textFile);
 
 if __name__ == "__main__":
     main()
